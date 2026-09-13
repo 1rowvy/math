@@ -52,9 +52,9 @@ func main() {
 
 	ok, r1, r2, r3, alpha := simpleIteration.CheckConvergence(form)
 
-	fmt.Printf("ρ1 (по строкам)  = %.7f\n", r1)
-	fmt.Printf("ρ2 (по столбцам) = %.7f\n", r2)
-	fmt.Printf("ρ3 (евклидова)   = %.7f\n", r3)
+	fmt.Printf("ρ1 (по строкам)  = %f\n", r1)
+	fmt.Printf("ρ2 (по столбцам) = %f\n", r2)
+	fmt.Printf("ρ3 (евклидова)   = %f\n", r3)
 
 	if ok {
 		fmt.Println("метод сойдётся")
