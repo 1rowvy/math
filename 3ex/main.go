@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 // 0.6 -0.35 -0.25
 // 0.3 0.25 0.43
@@ -93,6 +96,16 @@ func gramShmidt(a [][]float64) ([][]float64, [][]float64) {
 	return r, t
 }
 
+func det(r [][]float64) float64 {
+	var det float64 = 1
+
+	for i := 0; i < len(r); i++ {
+		det *= math.Sqrt(dot(r[i], r[i])
+	}
+
+	return det
+}
+
 func solve(a [][]float64, r [][]float64, b []float64) []float64 {
 	n := len(a)
 	x := make([]float64, len(a))
@@ -135,6 +148,9 @@ func main() {
 
 	fmt.Println("решение")
 	fmt.Println(solve(transposeA, r, vectorB))
+
+	fmt.Println("определитель")
+	fmt.Println(det(r))
 }
 
 func printMatrix(m [][]float64) {
